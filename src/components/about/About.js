@@ -24,14 +24,14 @@ export default function About() {
             <h5 className="frase">Desenvolvedor Full Stack</h5>
           </div>
           <div className="botao_container">
-            <a className="neon-bt" href="#">
+            <a href="#" onClick={e => e.preventDefault()}>
               <span />
               <span />
               <span />
               <span />
               Download CV
             </a>
-            <a className="neon-bt" href="#">
+            <a href="#" onClick={e => e.preventDefault()}>
               <span />
               <span />
               <span />
@@ -40,9 +40,7 @@ export default function About() {
             </a>
           </div>
         </div>
-        <div className="col ">
-
-        </div>
+        <div className="col " />
         <div className="col coluna_2">
           <div className=" container_img">
             <img src={fotoLutero} alt="foto1" className="foto1" />
