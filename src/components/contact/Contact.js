@@ -11,17 +11,17 @@ export default function Contact() {
         <h1>Contatos</h1>
       </div>
       <div className="container_contato">
-        <a href="https://github.com/MarcosLutero?tab=repositories" target="_blank">
+        <a href="https://github.com/MarcosLutero?tab=repositories" target="_blank" rel="noopener noreferrer">
           <div data-text="Github" className="glass">
             <FontAwesomeIcon icon={faGithub} />
           </div>
         </a>
-        <a href="https://www.instagram.com/luterorocha_/" target="_blank">
+        <a href="https://www.instagram.com/luterorocha_/" target="_blank" rel="noopener noreferrer">
           <div data-text="Instagram" className="glass">
             <FontAwesomeIcon icon={faInstagram} />
           </div>
         </a>
-        <a href="https://www.linkedin.com/in/marcos-rocha-418b50147/" target="_blank">
+        <a href="https://www.linkedin.com/in/marcos-rocha-418b50147/" target="_blank" rel="noopener noreferrer">
           <div data-text="Linkedin" className="glass">
             <FontAwesomeIcon icon={faLinkedin} />
           </div>

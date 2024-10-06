@@ -3,7 +3,7 @@ import "./index.css";
 import splash_azul from "../imagens/splash_azul.jpg";
 import fotoLutero from "../imagens/fotoLutero.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCss3, faCss3Alt, faFigma, faHtml5, faJs, faReact, faSass, faTypo3 } from "@fortawesome/free-brands-svg-icons";
+import { faCss3, faFigma, faHtml5, faJs, faReact, faSass } from "@fortawesome/free-brands-svg-icons";
 
 export default function About() {
   const [typingFinished, setTypingFinished] = useState(false);
