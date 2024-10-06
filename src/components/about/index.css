@@ -1,0 +1,312 @@
+.container {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linha1,
+.linha2 {
+  margin-top: 80px;
+}
+
+.titulo {
+  margin: 0;
+  font-size: 2.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid;
+  width: fit-content;
+  animation: typing 3.5s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+.titulo.typing-finished {
+  border-right: none; /* Remove a barra ao final da animação */
+  animation: none; /* Para a animação de blink */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.titulo:nth-child(2) {
+  color: #8257e6;
+  animation-delay: 1.5s;
+}
+
+.frase {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #8257e6;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.coluna_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao_container {
+  flex: 1;
+  display: flex; /* Garantir que os botões fiquem em linha */
+  justify-content: space-between; /* Controlar o espaço entre eles */
+  gap: 20px; /* Espaçamento entre os botões */
+}
+.neon-bt {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.2s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.neon-bt:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+.neon-bt span {
+  position: absolute;
+  display: block;
+}
+
+.neon-bt span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.neon-bt span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.neon-bt span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.neon-bt span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes rotate-hue {
+  to {
+    filter: hue-rotate(1turn);
+  }
+}
+
+button,
+button::after {
+  box-sizing: border-box;
+}
+
+button:active {
+  --border-width: 5px;
+}
+
+.container_img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  overflow: hidden; /* Garante que o zoom da imagem não saia do container */
+  border-radius: 10px; /* Para o efeito de borda arredondada */
+  transition: box-shadow 0.5s ease; /* Transição suave para o box-shadow */
+}
+
+.foto1,
+.foto2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Transição suave para zoom e opacidade */
+}
+
+.foto2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: screen;
+  opacity: 1;
+  z-index: 2;
+}
+
+.container_img:hover {
+  box-shadow: 0 0 20px #03e9f4, 0 0 40px #03e9f4, 0 0 60px #03e9f4, 0 0 80px #03e9f4; /* Efeito neon */
+}
+
+.container_img:hover .foto2 {
+  opacity: 0; /* Foto2 desaparece ao passar o mouse */
+}
+
+.container_img:hover .foto1 {
+  transform: scale(1.2); /* Foto1 cresce ao passar o mouse (20% maior) */
+  box-shadow: 0 0 20px #03e9f4; /* Efeito neon na foto */
+}
+
+.sobre_mim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.titulo_sobre_mim {
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #f9f9f9;
+  font-weight: 600;
+}
+.sobre_mim_frase {
+  font-size: 1em;
+  text-align: center;
+  width: 55%;
+  line-height: 180%;
+}
+
+.titulo_habilidades {
+  margin: 1em;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5rem;
+}
+
+.skill-card {
+  position: relative;
+  text-align: center;
+  background-color: #212121;
+  width: 7rem;
+  aspect-ratio: 1;
+  padding: 1rem 0; /* Adiciona um pouco de padding para espaçamento */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaçamento adequado entre nome e ícone */
+  align-items: center;
+  border-top-left-radius: 2.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Efeito de elevação */
+  box-shadow: 0 0 15px #8f5fe8, 0 0 30px #8f5fe8; /* Efeito neon */
+}
+
+.nome_icone {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8257e6; /* Define a cor do nome */
+}
+
+.icon_habilidade {
+  font-size: 3rem; /* Aumenta o tamanho do ícone */
+  color: #8257e6; /* Define a mesma cor do nome */
+}

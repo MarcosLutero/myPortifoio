@@ -1,0 +1,11 @@
+.corpo.light-mode {
+  background: radial-gradient(ellipse at bottom, #993AF7 0%, #0CC0DF 100%);
+  color: #121212;
+  height: 100%;
+}
+
+.corpo.dark-mode {
+  background: radial-gradient(ellipse at bottom, #0A0E59 0%, #010326 100%);
+  color: white;
+  height: 100%;
+}

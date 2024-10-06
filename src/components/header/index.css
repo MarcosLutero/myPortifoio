@@ -1,0 +1,139 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+  background-color: #1c0f45;
+  color: white;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Evita que a linha saia da borda do header */
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Ajustado para iniciar no limite do header */
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, cyan, transparent); /* Gradiente neon */
+  animation: neon-line 2s linear infinite; /* Animação contínua */
+}
+
+@keyframes neon-line {
+  0% {
+    left: 0; /* Começa dentro da largura do header */
+  }
+  50% {
+    left: 0; /* Cobre toda a largura */
+  }
+  100% {
+    left: 100%; /* Sai pela direita */
+  }
+}
+
+
+.header a,
+.toggle-container,
+.menu-icon {
+  margin: 0 15px;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+}
+
+
+.menu-icon:hover .bar {
+  background-color: #00ffff;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 64px;
+  left: -200px;
+  background-color: #571089;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 150;
+  width: 190px;
+  transition: left 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
+  text-decoration: none;
+}
+.fa_icon {
+  margin-right: 8px;
+}
+
+.nav.open {
+  left: 10px;
+}
+
+
+.nav a:hover {
+  color: #00ffff;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  padding: 3px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #000;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.icon {
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.moon {
+  left: 5px;
+}
+
+.sun {
+  right: 5px;
+}
+
+.light {
+  transform: translateX(0);
+}
+
+.dark {
+  transform: translateX(30px);
+}
