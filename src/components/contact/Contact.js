@@ -6,7 +6,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 
 export default function Contact() {
   return (
-    <>
+    <div className="contato">
       <div className="text-center">
         <h1>Contatos</h1>
       </div>
@@ -27,6 +27,6 @@ export default function Contact() {
           </div>
         </a>
       </div>
-    </>
+    </div>
   );
 }

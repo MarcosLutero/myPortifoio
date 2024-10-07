@@ -1,10 +1,12 @@
 .container {
-  padding: 20px;
+  padding: 40px;
 }
 
-.row {
+
+.coluna_1 {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -14,6 +16,7 @@
 }
 
 .titulo {
+  color: #1c0f45;
   margin: 0;
   font-size: 2.5rem;
   overflow: hidden;
@@ -69,6 +72,8 @@
   }
 }
 
+
+
 .coluna_2 {
   display: flex;
   flex-direction: column;
@@ -79,7 +84,7 @@
 .botao_container {
   flex: 1;
   display: flex; /* Garantir que os botões fiquem em linha */
-  justify-content: space-between; /* Controlar o espaço entre eles */
+  justify-content: flex-start; /* Controlar o espaço entre eles */
   gap: 20px; /* Espaçamento entre os botões */
 }
 .neon-bt {
@@ -229,7 +234,7 @@ button:active {
   top: 0;
   left: 0;
   mix-blend-mode: screen;
-  opacity: 1;
+  opacity: 0.4;
   z-index: 2;
 }
 
@@ -250,17 +255,17 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
 }
 
 .titulo_sobre_mim {
+  margin-top: 10px;
   text-transform: uppercase;
+  color: #1c0f45;
   font-size: 2em;
-  color: #f9f9f9;
   font-weight: 600;
 }
 .sobre_mim_frase {
-  font-size: 1em;
+  font-size: 1.1em;
   text-align: center;
   width: 55%;
   line-height: 180%;
@@ -268,11 +273,13 @@ button:active {
 
 .titulo_habilidades {
   margin: 1em;
+  text-transform: uppercase;
   font-size: 2em;
   font-weight: 600;
 }
 
 .skills-container {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

@@ -1,11 +1,27 @@
 .corpo.light-mode {
-  background: radial-gradient(ellipse at bottom, #993AF7 0%, #0CC0DF 100%);
-  color: #121212;
+  background: radial-gradient(ellipse at bottom, #FA75C6 0%, #E4C9FA 100%);
   height: 100%;
 }
 
+/* Defina a cor branca para os títulos no modo claro */
+.corpo.light-mode h1,
+.corpo.light-mode h2,
+.corpo.light-mode h3,
+.corpo.light-mode h4,
+.corpo.light-mode h5 {
+  color: #fff;
+}
+
 .corpo.dark-mode {
-  background: radial-gradient(ellipse at bottom, #0A0E59 0%, #010326 100%);
-  color: white;
+  background: radial-gradient(ellipse at bottom, #C275FA 0%, #1C0F45 100%);
   height: 100%;
+}
+
+/* Defina a cor #1C0F45 para os títulos no modo escuro */
+.corpo.dark-mode h1,
+.corpo.dark-mode h2,
+.corpo.dark-mode h3,
+.corpo.dark-mode h4,
+.corpo.dark-mode h5 {
+  color: #1C0F45;
 }

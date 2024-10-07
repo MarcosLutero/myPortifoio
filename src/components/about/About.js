@@ -5,7 +5,7 @@ import fotoLutero from "../imagens/fotoLutero.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCss3, faFigma, faHtml5, faJs, faReact, faSass } from "@fortawesome/free-brands-svg-icons";
 
-export default function About() {
+export default function About({ contactRef }) {
   const [typingFinished, setTypingFinished] = useState(false);
 
   useEffect(() => {
@@ -14,6 +14,10 @@ export default function About() {
     }, 4500); // O tempo aqui deve corresponder ao tempo total da animação
     return () => clearTimeout(timer);
   }, []);
+
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="container">
       <div className="row linha1">
@@ -24,14 +28,14 @@ export default function About() {
             <h5 className="frase">Desenvolvedor Full Stack</h5>
           </div>
           <div className="botao_container">
-            <a href="#" onClick={e => e.preventDefault()}>
+          <a href="../documents/CurriculumLutero.pdf" download="Curriulum Lutero.pdf" className="neon-bt">
               <span />
               <span />
               <span />
               <span />
               Download CV
             </a>
-            <a href="#" onClick={e => e.preventDefault()}>
+            <a href="#contato" className="neon-bt" onClick={(e) => { e.preventDefault(); scrollToContact(); }}>
               <span />
               <span />
               <span />
@@ -40,7 +44,7 @@ export default function About() {
             </a>
           </div>
         </div>
-        <div className="col " />
+       
         <div className="col coluna_2">
           <div className=" container_img">
             <img src={fotoLutero} alt="foto1" className="foto1" />
