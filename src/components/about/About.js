@@ -4,6 +4,7 @@ import splash_azul from "../imagens/splash.png";
 import fotoLutero from "../imagens/fotoLutero.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCss3, faFigma, faHtml5, faJs, faReact, faSass } from "@fortawesome/free-brands-svg-icons";
+import pdf from "../documents/curriculumLutero.pdf";
 
 export default function About({ contactRef }) {
   const [typingFinished, setTypingFinished] = useState(false);
@@ -28,14 +29,21 @@ export default function About({ contactRef }) {
             <h5 className="frase">Desenvolvedor Full Stack</h5>
           </div>
           <div className="botao_container">
-          <a href="../documents/CurriculumLutero.pdf" download="Curriulum Lutero.pdf" className="neon-bt">
+            <a href={pdf} download="Curriulum Lutero.pdf" className="neon-bt">
               <span />
               <span />
               <span />
               <span />
               Download CV
             </a>
-            <a href="#contato" className="neon-bt" onClick={(e) => { e.preventDefault(); scrollToContact(); }}>
+            <a
+              href="#contato"
+              className="neon-bt"
+              onClick={e => {
+                e.preventDefault();
+                scrollToContact();
+              }}
+            >
               <span />
               <span />
               <span />
@@ -44,7 +52,7 @@ export default function About({ contactRef }) {
             </a>
           </div>
         </div>
-       
+
         <div className="col coluna_2">
           <div className=" container_img">
             <img src={fotoLutero} alt="foto1" className="foto1" />
