@@ -8,9 +8,12 @@
 .corpo.light-mode h2,
 .corpo.light-mode h3,
 .corpo.light-mode h4,
-.corpo.light-mode h5 {
+.corpo.light-mode h5,
+.corpo.light-mode p
+ {
   color: #fff;
 }
+
 
 .corpo.dark-mode {
   background: radial-gradient(ellipse at bottom, #C275FA 0%, #1C0F45 100%);
@@ -24,4 +27,8 @@
 .corpo.dark-mode h4,
 .corpo.dark-mode h5 {
   color: #1C0F45;
+}
+
+.corpo.corpo.dark-mode p{
+  color: black;
 }

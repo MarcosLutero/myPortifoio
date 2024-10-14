@@ -6,40 +6,10 @@
   background-color: #1c0f45;
   color: white;
   flex-wrap: wrap;
-  position: relative;
+  position: relative; /* Necessário para o nav ser posicionado relativo a ele */
   z-index: 1;
-  overflow: hidden; /* Evita que a linha saia da borda do header */
 }
 
-.header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0; /* Ajustado para iniciar no limite do header */
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, cyan, transparent); /* Gradiente neon */
-  animation: neon-line 2s linear infinite; /* Animação contínua */
-}
-
-@keyframes neon-line {
-  0% {
-    left: 0; /* Começa dentro da largura do header */
-  }
-  50% {
-    left: 0; /* Cobre toda a largura */
-  }
-  100% {
-    left: 100%; /* Sai pela direita */
-  }
-}
-
-
-.header a,
-.toggle-container,
-.menu-icon {
-  margin: 0 15px;
-}
 
 .menu-icon {
   display: flex;
@@ -55,21 +25,27 @@
 }
 
 .nav {
-  display: flex;
-  flex-direction: column;
   position: absolute;
-  top: 64px;
-  left: -200px;
+  top: 100%; /* Coloca o menu logo abaixo do header */
+  left: 10px; /* Ajusta a posição para mais próximo do botão */
   background-color: #571089;
   padding: 20px;
   border-radius: 8px;
   z-index: 150;
-  width: 190px;
-  transition: left 0.3s ease;
+  width: 190px; /* Define a largura do menu */
+  transform: translateX(-20px); /* Move um pouco para cima antes de aparecer */
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   text-transform: uppercase;
   font-weight: bold;
 }
 
+.nav.open {
+  transform: translateY(0); /* Traz o menu para a posição original */
+  opacity: 1;
+  pointer-events: auto; /* Permite interação quando o menu está aberto */
+}
 .nav a {
   display: flex;
   align-items: center;
@@ -77,28 +53,26 @@
   color: white;
   text-decoration: none;
 }
+.nav a:hover {
+  color: #00ffff;
+}
 .fa_icon {
   margin-right: 8px;
 }
 
-.nav.open {
-  left: 10px;
-}
 
 
-.nav a:hover {
-  color: #00ffff;
-}
+
 
 .toggle-container {
   display: flex;
   align-items: center;
   cursor: pointer;
   background-color: #f0f0f0;
-  width: 60px;
-  height: 30px;
+  width: 4.2em;
+  height: 2.2em;
   border-radius: 50px;
-  padding: 3px;
+  padding: 5px;
   position: absolute;
   top: 15px;
   right: 20px;

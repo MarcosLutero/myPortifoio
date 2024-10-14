@@ -21,11 +21,7 @@ function Header({ setDarkMode, darkMode }) {
   return (
     <header className=" header">
       <FontAwesomeIcon icon={faBars} onClick={toggleMenu}/>
-      <nav className={`nav ${menuOpen ? "open" : ""}`}>
-        <a href="#home">
-          <FontAwesomeIcon icon={faHome} className="fa_icon" />
-          <span>Home</span>
-        </a>       
+      <nav className={`nav ${menuOpen ? "open" : ""}`}>     
         <a href="#about">
           <FontAwesomeIcon icon={faAddressCard} className="fa_icon" />
           <span>Sobre</span>

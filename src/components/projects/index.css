@@ -1,0 +1,151 @@
+/* Card e efeito hover */
+.card_projetos_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.card_projetos {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(237, 117, 250, 0.5);
+}
+
+.card_projetos:hover {
+  transform: scale(1.05); /* Aumenta o card ao passar o mouse */
+  box-shadow: 0 0 40px rgba(237, 117, 250, 0.7);
+}
+
+.card_header_projetos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imagem_card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal_content {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%; /* Aumenta o tamanho do modal */
+  max-width:1200px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.modal_image_container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.modal_image {
+  width: 70%;
+  height: 70%;
+  border-radius: 8px;
+}
+
+.modal_text {
+  margin-left: 20px; /* Espaço entre a imagem e o texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: justify;
+}
+
+.modal_text h2 {
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.modal_text p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #cccccc;
+}
+
+
+.tecnologias_lista {
+  display: flex;
+  gap: 30px; /* Espaçamento entre tecnologias */
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza a lista */
+}
+
+.tecnologia_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tecnologia_nome {
+  font-size: 14px;
+  margin-bottom: 5px; /* Espaço entre o nome e o logo */
+}
+
+.tecnologia_logo {
+  width: 40px;
+  height: 40px;
+}
+
+
+.modal_footer {
+  margin-top: 20px;
+  align-self: self-end;
+}
+
+
+.botao_saiba_mais {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6200ea;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.botao_saiba_mais:hover {
+  background-color: #3700b3;
+}

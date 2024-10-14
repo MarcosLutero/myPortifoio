@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
-import splash_azul from "../imagens/splash_azul.jpg";
+import splash_azul from "../imagens/splash.png";
 import fotoLutero from "../imagens/fotoLutero.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCss3, faFigma, faHtml5, faJs, faReact, faSass } from "@fortawesome/free-brands-svg-icons";
@@ -21,9 +21,9 @@ export default function About({ contactRef }) {
   return (
     <div className="container">
       <div className="row linha1">
-        <div className="col coluna_1">
+        <div className="col coluna_1 mt-2">
           <div>
-            <h1 className={`titulo ${typingFinished ? "typing-finished" : ""}`}>Olá, eu sou o</h1>
+            <h1 className={`titulo ${typingFinished ? "typing-finished" : ""}`}>Olá, eu sou</h1>
             <h1 className={`titulo ${typingFinished ? "typing-finished" : ""}`}>Marcos Lutero</h1>
             <h5 className="frase">Desenvolvedor Full Stack</h5>
           </div>

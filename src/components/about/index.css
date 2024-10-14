@@ -84,8 +84,9 @@
 .botao_container {
   flex: 1;
   display: flex; /* Garantir que os botões fiquem em linha */
-  justify-content: flex-start; /* Controlar o espaço entre eles */
+  justify-content: space-between; /* Controlar o espaço entre eles */
   gap: 20px; /* Espaçamento entre os botões */
+  align-items: center;
 }
 .neon-bt {
   position: relative;
@@ -100,6 +101,7 @@
   margin-top: 40px;
   letter-spacing: 4px;
   font-weight: bold;
+
 }
 
 .neon-bt:hover {
@@ -213,8 +215,8 @@ button:active {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   overflow: hidden; /* Garante que o zoom da imagem não saia do container */
   border-radius: 10px; /* Para o efeito de borda arredondada */
   transition: box-shadow 0.5s ease; /* Transição suave para o box-shadow */
@@ -234,12 +236,12 @@ button:active {
   top: 0;
   left: 0;
   mix-blend-mode: screen;
-  opacity: 0.4;
+  opacity: 0.5;
   z-index: 2;
 }
 
 .container_img:hover {
-  box-shadow: 0 0 20px #03e9f4, 0 0 40px #03e9f4, 0 0 60px #03e9f4, 0 0 80px #03e9f4; /* Efeito neon */
+  box-shadow: 0 0 20px #ED75FA, 0 0 40px #ED75FA, 0 0 60px #ED75FA, 0 0 80px #ED75FA; /* Efeito neon */
 }
 
 .container_img:hover .foto2 {
